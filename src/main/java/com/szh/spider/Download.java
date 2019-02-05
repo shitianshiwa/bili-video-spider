@@ -1,33 +1,21 @@
 package com.szh.spider;
 
+import java.io.IOException;
+
 import com.alibaba.fastjson.JSONObject;
 import com.szh.spider.uitls.ElasticSearchPoolUtil;
-import com.szh.spider.uitls.HttpConnectionPool;
-import org.apache.http.HttpEntity;
+
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.RestHighLevelClient;
-
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-
-/**
- * @ClassName Download
- * @Description TODO
- * @Author szh
- * @Date 2020/4/4 16:49
- * @Version 1.0
- **/
 public class Download implements Runnable{
     private String u = "https://api.bilibili.com/x/web-interface/view?aid=";
     private int i;

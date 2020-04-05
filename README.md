@@ -9,6 +9,10 @@
 * 主要采用线程池,HttpClient连接池和RestHighLevelClient连接池. 
 * 主要用于通过Elasticsearch 聚合查询, 实现数据可视化操作.
 
+## 部分数据展示
+
+![image-20200405120348419](doc/image-20200405120348419.png)
+
 ## Elasticsearch 索引
 
 ```typescript
@@ -309,9 +313,6 @@ PUT /bili
 }
 ```
 
-## 部分数据展示
-
-![image-20200405120348419](doc/image-20200405120348419.png)
 
 
 
